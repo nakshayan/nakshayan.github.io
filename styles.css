@@ -8,7 +8,31 @@ body {
     background-color: black;
     color: lightgray;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    margin: 20px;
+    opacity: 0.1;
+    position: absolute; /* Position the square absolutely within the body */
+    right: 0; /* Start the square at the rightmost position */
+    top: 50%; /* Vertically center the square */
+    /*transform: translateY(-50%); /* Correct for the vertical centering */
+    animation: scrollRightToLeft 2s linear infinite; /* Apply the animation to the square */
+}
+
+@keyframes scrollRightToLeft {
+    0% {
+      right: 0%; /* Start position - rightmost position */
+    }
+    100% {
+      right: 100%; /* End position - leftmost position */
+    }
+  }
