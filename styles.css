@@ -1,4 +1,10 @@
+@font-face {
+    font-family: Inter;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+
 body {
+    font-family: 'Inter', sans-serif;
     background-color: black;
     color: lightgray;
     display: flex;
