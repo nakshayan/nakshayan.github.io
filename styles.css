@@ -1,9 +1,9 @@
 @font-face {
     font-family: Inter;
     src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Inter', sans-serif;
     background-color: black;
     color: lightgray;
@@ -13,26 +13,30 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-}
 
-.square {
+    overflow: hidden;
+  }
+  
+  .square {
     width: 100px;
     height: 100px;
     background-color: lightgray;
-    margin: 20px;
+    margin: 0px;
     opacity: 0.1;
-    position: absolute; /* Position the square absolutely within the body */
-    right: 0; /* Start the square at the rightmost position */
-    top: 50%; /* Vertically center the square */
-    /*transform: translateY(-50%); /* Correct for the vertical centering */
-    animation: scrollRightToLeft 2s linear infinite; /* Apply the animation to the square */
-}
-
-@keyframes scrollRightToLeft {
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    animation: scrollRightToLeft 2s linear infinite;
+    
+  }
+  
+  @keyframes scrollRightToLeft {
     0% {
-      right: 0%; /* Start position - rightmost position */
+      left: 100%; /* Start position - rightmost position */
     }
     100% {
-      right: 100%; /* End position - leftmost position */
+      left: -10%; /* End position - leftmost position */
     }
   }
+  
